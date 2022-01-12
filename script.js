@@ -12,6 +12,8 @@ let estaPintado = false;
 let botonAovar = document.querySelector("#nuevo-huevo");
 botonAovar.onclick = aovar;
 
+let SuperNatalidadBtn = document.querySelector("#super-natalidad");
+
 
 let boton = document.querySelector("#dinoBoton");
 boton.addEventListener("click", (event) => { // ES6
@@ -116,7 +118,14 @@ function aovar() {
         event.target.src = "./img/eclosion.png";
     });
 
+    // Queremos crear un boton que eclosione todos los huevos a la vez
+    SuperNatalidadBtn.addEventListener("click", () => {
+        huevo.src = "./img/eclosion.png";
+    });
+
+
     dinoContenedor.appendChild(huevo);
 }
+
 
 
